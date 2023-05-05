@@ -1,0 +1,394 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#"
+     xml:base="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#Have_combination_of_2_words -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#Have_combination_of_2_words"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#Have_word -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#Have_word"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#proposal_len -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#proposal_len">
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#word_informativity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#word_informativity">
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#bad -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#bad">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#Have_combination_of_2_words"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#attempt_to"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#of_each"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#of_time"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#plot_twist"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#Have_word"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#dumb"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#reviews"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#combination_of_2_words -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#combination_of_2_words"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#good -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#good">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#Have_combination_of_2_words"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#Bonham_Carter"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#Chuck_Palahniuk"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#Tyler_Durden"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#at_least"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#the_book"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#the_films"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#Have_word"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#Marla"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#actors"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#best"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#dark"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#proposal_len"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#reviews"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#reviews -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#reviews"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#word -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#word"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#Bonham_Carter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#Bonham_Carter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#combination_of_2_words"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#Chuck_Palahniuk -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#Chuck_Palahniuk">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#combination_of_2_words"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#Marla -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#Marla">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#word"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#Tyler_Durden -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#Tyler_Durden">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#combination_of_2_words"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#a_bad -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#a_bad">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#combination_of_2_words"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#actors -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#actors">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#word"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#at_least -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#at_least">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#combination_of_2_words"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#attempt_to -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#attempt_to"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#bad1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#bad1"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#best -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#best">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#word"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#dark -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#dark">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#word"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#dumb -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#dumb">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#word"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#films_of -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#films_of">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#combination_of_2_words"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#good1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#good1"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#good2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#good2"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#of_each -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#of_each">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#combination_of_2_words"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#of_time -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#of_time">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#combination_of_2_words"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#plot_twist -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#plot_twist">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#combination_of_2_words"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#the_book -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#the_book">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#combination_of_2_words"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#the_films -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#the_films">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#combination_of_2_words"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#word1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#word1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#word"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#word2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#word2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#word"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#Love_the_idea._Using_2_intelligent_handsome_leads_didn&apos;t_hurt._My_style_of_humor!!!_👍🏼👍🏼_Helena_Bonham_Carter_is_made_for_this_role._She_is_the_equivalent_of_a_female_Johnny_Depp,_who_takes_two_off_the_beaten_path_character_is_quite_well._Plus_she&apos;s_beautiful,_the_dark_setting_the_imagery._The_entire_tone_of_the_movie_just_feels_like_home_to_me._But_not_in_a_bad_way._Dark_can_be_bad_and_depressing._Dark_ca -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#Love_the_idea._Using_2_intelligent_handsome_leads_didn&apos;t_hurt._My_style_of_humor!!!_👍🏼👍🏼_Helena_Bonham_Carter_is_made_for_this_role._She_is_the_equivalent_of_a_female_Johnny_Depp,_who_takes_two_off_the_beaten_path_character_is_quite_well._Plus_she&apos;s_beautiful,_the_dark_setting_the_imagery._The_entire_tone_of_the_movie_just_feels_like_home_to_me._But_not_in_a_bad_way._Dark_can_be_bad_and_depressing._Dark_ca">
+        <Have_combination_of_2_words rdf:resource="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#Bonham_Carter"/>
+        <Have_combination_of_2_words rdf:resource="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#a_bad"/>
+        <Have_word rdf:resource="http://www.semanticweb.org/ito/ontologies/2023/3/rev.owl#dark"/>
+        <proposal_len rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">612</proposal_len>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
